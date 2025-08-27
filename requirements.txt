@@ -1,0 +1,5 @@
+strands-agents[otel]
+strands-agents-tools
+langfuse
+bedrock-agentcore-starter-toolkit
+bedrock-agentcore
