@@ -17,10 +17,6 @@ os.environ["OTEL_EXPORTER_OTLP_ENDPOINT"] = (
     os.environ.get("LANGFUSE_HOST") + "/api/public/otel"
 )
 os.environ["OTEL_EXPORTER_OTLP_HEADERS"] = f"Authorization=Basic {LANGFUSE_AUTH}"
-os.environ["OTEL_EXPORTER_OTLP_PROTOCOL"] = "http/protobuf"
-os.environ["OTEL_SDK_DISABLED"] = "false"
-# Disable metrics export to avoid the localhost:4318 connection attempts for metrics
-os.environ["OTEL_METRICS_EXPORTER"] = "none"
 
 # Imports must come after environment configuration for OpenTelemetry
 from strands import Agent  # noqa: E402
