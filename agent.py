@@ -19,10 +19,10 @@ os.environ["OTEL_EXPORTER_OTLP_ENDPOINT"] = (
 os.environ["OTEL_EXPORTER_OTLP_HEADERS"] = f"Authorization=Basic {LANGFUSE_AUTH}"
 
 # Imports must come after environment configuration for OpenTelemetry
-from strands import Agent  # noqa: E402
-from strands.telemetry import StrandsTelemetry  # noqa: E402
-from strands.models.bedrock import BedrockModel  # noqa: E402
-from bedrock_agentcore.runtime import BedrockAgentCoreApp  # noqa: E402
+from strands import Agent
+from strands.telemetry import StrandsTelemetry
+from strands.models.bedrock import BedrockModel
+from bedrock_agentcore.runtime import BedrockAgentCoreApp
 
 app = BedrockAgentCoreApp()
 
